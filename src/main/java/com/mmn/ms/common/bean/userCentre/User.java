@@ -16,6 +16,10 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class User {
+    public User(String name){
+        this.name = name;
+    }
+
     public enum SexType {
         F, M
     }
@@ -29,4 +33,14 @@ public class User {
     private SexType sex;//F:female,M:male
 
     private List<Role> roles;
+
+    //constant
+    public static final String CONSTANT = "OK";
+    public  final String CONSTANT_2 = "NO";
+
+    //static code block
+    static {
+        System.out.println("init……");
+        System.out.println("User's static code block");
+    }
 }
